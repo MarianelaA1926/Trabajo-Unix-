@@ -6,31 +6,31 @@ do
         if [[ $var1 =~ $re ]];then
              	break
         else
-             	echo "$var1 is an invalid number, try again"
+             	echo "$var1 numero invalido , prueba de nuevo"
         fi
 done
 }
 function tl {                         #Function 1
-echo "Too low, try again"
+echo "Muy bajo, prueba de nuevo"
 N
 }
 function th {                         #Function 2
-echo "Too high, try again"
+echo "Muy alto, prueba de nuevo"
 N
 }
 arc=$( ls | wc -l )
 end=0
-echo "Guess the number of files this directory has, not included the hidden files."
+echo "Adivina el numero de archivos que hay en el repositorio"
 N
 while [[ $end -eq 0 ]]              #Loop
 do
 	if [[ $var1 -eq $arc ]]     #If statement
 	then
-	echo "Congratulations! you guessed it."
+	echo "Felicidades Lo lograste"
 	end=1
 	elif [[ $var1 -gt $arc ]]
 	then
-	th
+	th 
 	elif [[ $var1 -lt $arc ]]
 	then
 	tl
